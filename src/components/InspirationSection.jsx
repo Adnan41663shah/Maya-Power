@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 
 const InspirationSection = () => {
   const [selectedPerson, setSelectedPerson] = useState(null);
@@ -46,14 +46,23 @@ const InspirationSection = () => {
     }
   ];
 
+  useEffect(() => {
+    if (selectedPerson) {
+      document.body.style.overflow = 'hidden';
+    } else {
+      document.body.style.overflow = 'unset';
+    }
+    return () => {
+      document.body.style.overflow = 'unset';
+    };
+  }, [selectedPerson]);
+
   const openModal = (person) => {
     setSelectedPerson(person);
-    document.body.style.overflow = 'hidden'; // Prevent background scrolling
   };
 
   const closeModal = () => {
     setSelectedPerson(null);
-    document.body.style.overflow = 'unset';
   };
 
   return (

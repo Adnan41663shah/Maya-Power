@@ -214,7 +214,6 @@ const Services = () => {
             src={service.image}
             alt={service.title}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
-            loading="lazy"
           />
           <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
           

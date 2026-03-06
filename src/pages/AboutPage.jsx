@@ -1,5 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
-import InspirationSection from '../components/InspirationSection';
+// import InspirationSection from '../components/InspirationSection';
 
 const AboutPage = () => {
   const [visibleSections, setVisibleSections] = useState([]);
@@ -73,10 +73,9 @@ const AboutPage = () => {
         'Finance Management',
         'Execution Strategy Development (PMP)'
       ],
-      image: 'https://images.unsplash.com/photo-1560250097-0b93528c311a?w=400&h=400&fit=crop',
     },
     {
-      name: 'Hirosh Yadav',
+      name: 'Satish Dalal',
       role: 'Partner - Installations And Execution',
       education: [
         'HSC',
@@ -91,25 +90,6 @@ const AboutPage = () => {
         'Responsible for Project Cost Control',
         'Lead Generations'
       ],
-      image: 'https://images.unsplash.com/photo-1519085360753-af0119f7cbe7?w=400&h=400&fit=crop',
-    },
-    {
-      name: 'Mayur Ukey',
-      role: 'Partner - Operations And Management',
-      education: [
-        'Bachelor Of Arts',
-        'ITI - Production & Manufacturing'
-      ],
-      experience: '8+ years',
-      responsibilities: [
-        'Drafting proposals, Contract Negotiations',
-        'Overseeing Project P&L, Project Management',
-        'Quality Control and Process Management',
-        'Market Analysis and Market Strategy',
-        'Design, Conceptualization, Planning, and Execution of PV projects',
-        'Lead Generations'
-      ],
-      image: 'https://images.unsplash.com/photo-1472099645785-5658abf4ff4e?w=400&h=400&fit=crop',
     },
   ];
 
@@ -162,7 +142,7 @@ const AboutPage = () => {
   return (
     <div className="bg-white min-h-screen">
       {/* Hero Section */}
-      <div className="relative h-[100vh] min-h-[500px] flex items-center justify-center overflow-hidden">
+      <div className="relative h-screen min-h-[500px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
         <div className="absolute inset-0 z-0">
           <img
@@ -187,7 +167,7 @@ const AboutPage = () => {
             className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-bold text-white mb-6 opacity-0 transition-all duration-500 leading-tight"
             style={{ transform: 'translateY(30px)' }}
           >
-            Powering a <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] to-[#8f3545]">Cleaner Future</span>
+            Powering a <span className="text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] to-[#8f3545]">Cleaner Future</span>
           </h1>
           <p className="text-gray-200 text-lg sm:text-xl max-w-2xl mx-auto leading-relaxed">
             Maya Power is dedicated to revolutionizing energy consumption with sustainable, cost-effective solar solutions for homes and businesses.
@@ -197,7 +177,7 @@ const AboutPage = () => {
 
       <section
         id="about"
-        className="py-16 sm:py-20 md:py-24 bg-gradient-to-b from-white via-gray-50 to-white"
+        className="py-16 sm:py-20 md:py-24 bg-linear-to-b from-white via-gray-50 to-white"
         aria-label="About us section"
       >
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -237,16 +217,15 @@ const AboutPage = () => {
                 src="https://images.unsplash.com/photo-1509391366360-2e959784a276?w=1200&h=800&fit=crop"
                 alt="Maya Power Team"
                 className="w-full h-full object-cover"
-                loading="lazy"
               />
             </div>
           </div>
         </div>
 
         {/* Inspiration Section */}
-        <div className="mb-16 sm:mb-20 md:mb-24">
+        {/* <div className="mb-16 sm:mb-20 md:mb-24">
           <InspirationSection />
-        </div>
+        </div> */}
 
         {/* Mission & Vision */}
         <div
@@ -258,7 +237,7 @@ const AboutPage = () => {
               : 'opacity-0 translate-y-10'
             } transition-all duration-500`}
         >
-          <div className="bg-gradient-to-br from-[#7d2e3d]/10 to-[#8f3545]/10 rounded-2xl p-8 sm:p-10 border-2 border-[#7d2e3d]/30">
+          <div className="bg-linear-to-br from-[#7d2e3d]/10 to-[#8f3545]/10 rounded-2xl p-8 sm:p-10 border-2 border-[#7d2e3d]/30">
             <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-[#7d2e3d] mb-4">
               <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
@@ -269,7 +248,7 @@ const AboutPage = () => {
             To design and deliver reliable, scalable, and cost-efficient solar solutions through expert engineering, quality execution, and turnkey EPC services that help clients transition seamlessly to renewable energy.
             </p>
           </div>
-          <div className="bg-gradient-to-br from-[#4a7c59]/10 to-[#7d2e3d]/10 rounded-2xl p-8 sm:p-10 border-2 border-[#4a7c59]/30">
+          <div className="bg-linear-to-br from-[#4a7c59]/10 to-[#7d2e3d]/10 rounded-2xl p-8 sm:p-10 border-2 border-[#4a7c59]/30">
             <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 text-[#4a7c59] mb-4">
               <svg className="w-full h-full" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
@@ -327,7 +306,7 @@ const AboutPage = () => {
           </h2>
           <div className="relative">
             {/* Timeline Line */}
-            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-gradient-to-b from-[#7d2e3d] to-[#8f3545] transform md:-translate-x-1/2" />
+            <div className="absolute left-4 md:left-1/2 top-0 bottom-0 w-1 bg-linear-to-b from-[#7d2e3d] to-[#8f3545] transform md:-translate-x-1/2" />
 
             <div className="space-y-8 md:space-y-12">
               {milestones.map((milestone, index) => (
@@ -346,7 +325,7 @@ const AboutPage = () => {
                         </div>
                       </div>
                       {/* Timeline Dot */}
-                      <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-gradient-to-r from-[#7d2e3d] to-[#8f3545] rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10 flex-shrink-0" />
+                      <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-linear-to-r from-[#7d2e3d] to-[#8f3545] rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10 shrink-0" />
                       {/* Empty Space on Right */}
                       <div className="flex-1 md:pl-8 hidden md:block" />
                     </>
@@ -355,7 +334,7 @@ const AboutPage = () => {
                       {/* Empty Space on Left */}
                       <div className="flex-1 md:pr-8 hidden md:block" />
                       {/* Timeline Dot */}
-                      <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-gradient-to-r from-[#7d2e3d] to-[#8f3545] rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10 flex-shrink-0" />
+                      <div className="absolute left-4 md:left-1/2 w-8 h-8 bg-linear-to-r from-[#7d2e3d] to-[#8f3545] rounded-full border-4 border-white shadow-lg transform md:-translate-x-1/2 z-10 shrink-0" />
                       {/* Right Card (Odd Index) */}
                       <div className="flex-1 pl-12 md:pl-8 md:text-left">
                         <div className="bg-white rounded-xl p-6 shadow-lg border border-gray-200">
@@ -382,58 +361,53 @@ const AboutPage = () => {
               : 'opacity-0 translate-y-10'
             } transition-all duration-500`}
         >
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-8 sm:mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-gray-900 mb-4 sm:mb-6 md:mb-8 text-center px-4">
             Our Leadership Team
           </h2>
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+          <p className="text-gray-600 text-base sm:text-lg text-center max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12 px-4">
+            Meet the leaders driving our vision for sustainable solar solutions.
+          </p>
+          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4 sm:px-0">
             {team.map((member, index) => (
               <div
                 key={index}
-                className="bg-white rounded-xl overflow-hidden shadow-lg border border-gray-100 hover:shadow-xl hover:border-[#7d2e3d]/30 transition-all duration-300 flex flex-col h-full"
+                className="bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-lg hover:border-[#7d2e3d]/20 transition-all duration-300 overflow-hidden flex flex-col"
               >
-                <div className="relative h-48 sm:h-56 overflow-hidden flex-shrink-0">
-                  <img
-                    src={member.image}
-                    alt={member.name}
-                    className="w-full h-full object-cover hover:scale-105 transition-transform duration-700"
-                    loading="lazy"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/80 via-black/20 to-transparent" />
-                  <div className="absolute bottom-3 left-4 right-4 text-white">
-                    <h3 className="text-xl font-bold mb-0.5">{member.name}</h3>
-                    <p className="text-[#d4af37] font-medium text-xs uppercase tracking-wider">{member.role}</p>
-                  </div>
+                {/* Header - name & role */}
+                <div className="px-5 py-4 sm:px-6 sm:py-5 bg-linear-to-br from-[#7d2e3d] to-[#8f3545]">
+                  <h3 className="text-lg sm:text-xl font-bold text-white mb-1">{member.name}</h3>
+                  <p className="text-[#d4af37] font-medium text-xs sm:text-sm uppercase tracking-wider">{member.role}</p>
                 </div>
-                
-                <div className="p-5 flex flex-col flex-grow text-sm">
+
+                <div className="p-5 sm:p-6 flex flex-col grow">
                   <div className="mb-4">
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2 border-b border-gray-100 pb-1">Education</h4>
-                    <ul className="space-y-0.5">
+                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">Education</h4>
+                    <ul className="space-y-1">
                       {member.education.map((edu, idx) => (
-                        <li key={idx} className="text-gray-600 flex items-start leading-snug">
-                          <span className="text-[#7d2e3d] mr-2 flex-shrink-0">•</span>
-                          <span>{edu}</span>
+                        <li key={idx} className="text-gray-600 flex items-start gap-2 text-sm leading-snug">
+                          <span className="text-[#7d2e3d] shrink-0 mt-0.5">•</span>
+                          <span className="wrap-break-word">{edu}</span>
                         </li>
                       ))}
                     </ul>
                   </div>
 
                   <div className="mb-4">
-                     <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-1 border-b border-gray-100 pb-1">Experience</h4>
-                     <p className="text-gray-700 font-medium">{member.experience}</p>
+                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-1">Experience</h4>
+                    <p className="text-gray-800 font-semibold text-sm">{member.experience}</p>
                   </div>
 
-                  <div className="mt-auto">
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wide mb-2 border-b border-gray-100 pb-1">Key Responsibilities</h4>
-                    <ul className="space-y-1">
-                       {member.responsibilities.map((resp, idx) => (
-                         <li key={idx} className="text-gray-600 flex items-start leading-snug">
-                           <svg className="w-3.5 h-3.5 text-[#7d2e3d] mr-1.5 flex-shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                             <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                           </svg>
-                           <span>{resp}</span>
-                         </li>
-                       ))}
+                  <div>
+                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">Key Responsibilities</h4>
+                    <ul className="space-y-1.5">
+                      {member.responsibilities.map((resp, idx) => (
+                        <li key={idx} className="text-gray-600 flex items-start gap-2 text-sm leading-snug">
+                          <svg className="w-4 h-4 text-[#7d2e3d] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                          </svg>
+                          <span className="wrap-break-word">{resp}</span>
+                        </li>
+                      ))}
                     </ul>
                   </div>
                 </div>
