@@ -1,14 +1,6 @@
 # Maya Power - Solar Panel Solutions Website
 
-<<<<<<< HEAD
-Live project Link1: https://maya-power-solar-solutions.vercel.app/
-
-Live project link2: https://solar-solutions-git-featur-abfc32-adnan-shahs-projects-a5cfa541.vercel.app/
-
-A modern, responsive web application for Solar Nexus, showcasing solar panel solutions and services. Built with React and Vite, featuring a beautiful UI with WhatsApp integration for seamless customer communication.
-=======
-A modern, responsive web application for Maya Power, showcasing solar panel solutions and services. Built with React and Vite, featuring a beautiful UI with WhatsApp integration for seamless customer communication.
->>>>>>> fb227dc (updated the UI)
+Live project Link: https://maya-power.vercel.app/
 
 ## 🌟 Features
 
