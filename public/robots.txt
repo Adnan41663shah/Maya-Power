@@ -1,0 +1,6 @@
+# https://www.robotstxt.org/robotstxt.html
+User-agent: *
+Allow: /
+
+# Sitemap (update base URL if your site is deployed elsewhere)
+Sitemap: https://mayapower.com/sitemap.xml

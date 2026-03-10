@@ -31,6 +31,7 @@ const Navbar = () => {
       setIsMobileMenuOpen(false);
       if (location.pathname !== '/') {
         // If not on home page, navigate to home first
+        // eslint-disable-next-line react-hooks/immutability
         window.location.href = `/${href}`;
       } else {
         const element = document.querySelector(href);
@@ -45,6 +46,7 @@ const Navbar = () => {
 
   return (
     <nav
+      aria-label="Main navigation"
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-500 ${
         isScrolled
           ? 'bg-white/90  shadow-lg shadow-[#7d2e3d]/20'
@@ -54,7 +56,7 @@ const Navbar = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16 md:h-20">
           {/* Logo */}
-          <div className="flex-shrink-0">
+          <div className="shrink-0">
             <Link
               to="/"
               onClick={() => setIsMobileMenuOpen(false)}
@@ -96,7 +98,7 @@ const Navbar = () => {
                 >
                   {link.name}
                   <span
-                    className={`absolute bottom-0 left-0 h-0.5 bg-gradient-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 ${
+                    className={`absolute bottom-0 left-0 h-0.5 bg-linear-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 ${
                       isActive ? 'w-full' : 'w-0 group-hover:w-full'
                     }`}
                   />
@@ -109,13 +111,13 @@ const Navbar = () => {
                   className="relative text-gray-700 hover:text-[#7d2e3d] transition-colors duration-300 font-medium group cursor-pointer"
                 >
                   {link.name}
-                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-gradient-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 group-hover:w-full" />
+                  <span className="absolute bottom-0 left-0 w-0 h-0.5 bg-linear-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 group-hover:w-full" />
                 </a>
               );
             })}
             <button
               onClick={openModal}
-              className="px-6 py-2.5 bg-gradient-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#7d2e3d]/50 transition-all duration-300 hover:scale-105 inline-block cursor-pointer"
+              className="px-6 py-2.5 bg-linear-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#7d2e3d]/50 transition-all duration-300 hover:scale-105 inline-block cursor-pointer"
             >
               Get a Projection
             </button>
@@ -182,7 +184,7 @@ const Navbar = () => {
               >
                 {link.name}
                 <span
-                  className={`absolute bottom-0 left-0 h-1 bg-gradient-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 rounded-full ${
+                  className={`absolute bottom-0 left-0 h-1 bg-linear-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 rounded-full ${
                     isActive ? 'w-full' : 'w-0 group-hover:w-full'
                   }`}
                 />
@@ -195,7 +197,7 @@ const Navbar = () => {
                 className="relative text-2xl font-semibold text-gray-700 hover:text-[#7d2e3d] transition-colors duration-300 group cursor-pointer"
               >
                 {link.name}
-                <span className="absolute bottom-0 left-0 w-0 h-1 bg-gradient-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 group-hover:w-full rounded-full" />
+                <span className="absolute bottom-0 left-0 w-0 h-1 bg-linear-to-r from-[#7d2e3d] to-[#8f3545] transition-all duration-300 group-hover:w-full rounded-full" />
               </a>
             );
           })}
@@ -204,7 +206,7 @@ const Navbar = () => {
               setIsMobileMenuOpen(false);
               openModal();
             }}
-            className="px-8 py-3 bg-gradient-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#7d2e3d]/50 transition-all duration-300 text-lg hover:scale-105 inline-block cursor-pointer"
+            className="px-8 py-3 bg-linear-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#7d2e3d]/50 transition-all duration-300 text-lg hover:scale-105 inline-block cursor-pointer"
           >
             Get a Projection
           </button>

@@ -106,7 +106,7 @@ const WhyChooseUs = () => {
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
           <h2
             ref={titleRef}
-            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] animate-gradient-shift mb-4 opacity-0 transition-all duration-500 uppercase"
+            className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] animate-gradient-shift mb-4 opacity-0 transition-all duration-500 uppercase"
             style={{ transform: 'translateY(30px)' }}
           >
             Maya Power Advantage
@@ -126,7 +126,7 @@ const WhyChooseUs = () => {
                 ref={(el) => {
                   if (el) itemsRef.current[index] = el;
                 }}
-                className={`bg-gradient-to-br from-white to-gray-50 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl hover:border-[#7d2e3d]/50 transition-all duration-500 group ${
+                className={`bg-linear-to-br from-white to-gray-50 rounded-xl p-6 sm:p-8 shadow-lg border border-gray-200 hover:shadow-xl hover:border-[#7d2e3d]/50 transition-all duration-500 group ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
@@ -136,7 +136,7 @@ const WhyChooseUs = () => {
                 }}
               >
                 {/* Icon Container */}
-                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-gradient-to-br from-[#7d2e3d] to-[#8f3545] rounded-xl p-4 mb-6 flex items-center justify-center text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-[#7d2e3d]/30">
+                <div className="w-16 h-16 sm:w-20 sm:h-20 md:w-24 md:h-24 bg-linear-to-br from-[#7d2e3d] to-[#8f3545] rounded-xl p-4 mb-6 flex items-center justify-center text-white group-hover:scale-110 group-hover:rotate-3 transition-all duration-300 shadow-lg shadow-[#7d2e3d]/30">
                   {benefit.icon}
                 </div>
 

@@ -70,17 +70,17 @@ const Teaser = () => {
     <section
       ref={sectionRef}
       id="teaser"
-      className="relative py-20 sm:py-24 md:py-32 bg-gradient-to-br from-white via-gray-50 to-white overflow-hidden"
+      className="relative py-20 sm:py-24 md:py-32 bg-linear-to-br from-white via-gray-50 to-white overflow-hidden"
       aria-label="Testimonial and call to action section"
     >
       {/* Dynamic Background Shape */}
-      <div className="absolute inset-0 bg-gradient-to-r from-[#d4af37]/10 via-transparent to-[#7d2e3d]/10 transform -skew-y-2 origin-top" />
-      <div className="absolute inset-0 bg-gradient-to-l from-[#d4af37]/10 via-transparent to-[#4a7c59]/10 transform skew-y-2 origin-bottom" />
+      <div className="absolute inset-0 bg-linear-to-r from-[#d4af37]/10 via-transparent to-[#7d2e3d]/10 transform -skew-y-2 origin-top" />
+      <div className="absolute inset-0 bg-linear-to-l from-[#d4af37]/10 via-transparent to-[#4a7c59]/10 transform skew-y-2 origin-bottom" />
 
       <div className="max-w-6xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Section Header */}
         <div className="text-center mb-12 sm:mb-16 md:mb-20">
-          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] mb-4 sm:mb-6">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] mb-4 sm:mb-6">
             What Our Customers Say
           </h2>
           <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
@@ -98,7 +98,7 @@ const Teaser = () => {
                 ref={(el) => {
                   if (el) testimonialsRef.current[index] = el;
                 }}
-                className={`bg-gradient-to-br from-white to-gray-50 backdrop-blur-xl border border-[#7d2e3d]/40 rounded-2xl p-6 sm:p-8 shadow-xl shadow-[#7d2e3d]/20 transition-all duration-500 ${
+                className={`bg-linear-to-br from-white to-gray-50 backdrop-blur-xl border border-[#7d2e3d]/40 rounded-2xl p-6 sm:p-8 shadow-xl shadow-[#7d2e3d]/20 transition-all duration-500 ${
                   isVisible
                     ? 'opacity-100 translate-y-0'
                     : 'opacity-0 translate-y-10'
@@ -108,8 +108,8 @@ const Teaser = () => {
                 }}
               >
                 <div className="flex items-start space-x-4 mb-4">
-                  <div className="flex-shrink-0">
-                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#7d2e3d] to-[#8f3545] rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-lg">
+                  <div className="shrink-0">
+                    <div className="w-14 h-14 sm:w-16 sm:h-16 bg-linear-to-br from-[#7d2e3d] to-[#8f3545] rounded-full flex items-center justify-center text-xl sm:text-2xl font-bold text-white shadow-lg">
                       {testimonial.initials}
                     </div>
                   </div>

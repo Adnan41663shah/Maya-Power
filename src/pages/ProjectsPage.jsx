@@ -1,4 +1,5 @@
 import React, { useEffect, useState, useRef } from 'react';
+import SEO from '../components/SEO';
 
 const ProjectsPage = () => {
   useEffect(() => {
@@ -129,11 +130,17 @@ const ProjectsPage = () => {
 
 
   return (
-    <section
-      id="projects"
-      className="py-16 sm:py-20 md:py-24 lg:py-32 bg-gradient-to-b from-white via-gray-50 to-white min-h-screen"
-      aria-label="Projects portfolio section"
-    >
+    <>
+      <SEO
+        title="Our Projects - Solar Installations Portfolio"
+        description="Explore Maya Power's solar project portfolio across Maharashtra: data centers, residential communities, university campuses, industrial plants, and more. Real-world impact through sustainable energy."
+        path="/projects"
+      />
+      <section
+        id="projects"
+        className="py-16 sm:py-20 md:py-24 lg:py-32 bg-linear-to-b from-white via-gray-50 to-white min-h-screen"
+        aria-label="Projects portfolio section"
+      >
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         {/* Header Section */}
         {/* Modern Header Section */}
@@ -149,7 +156,7 @@ const ProjectsPage = () => {
                 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-gray-900 mb-6 leading-tight opacity-0 transition-all duration-500"
                 style={{ transform: 'translateY(30px)' }}
               >
-                Impact <span className="text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] to-[#8f3545]">Portfolio</span>
+                Impact <span className="text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] to-[#8f3545]">Portfolio</span>
               </h1>
               <p
                 ref={subtitleRef}
@@ -166,13 +173,13 @@ const ProjectsPage = () => {
                alt="Solar Project Highlights" 
                className="w-full h-full object-cover scale-110 hover:scale-100 transition-transform duration-500"
              />
-             <div className="absolute inset-0 bg-gradient-to-tr from-[#7d2e3d]/20 to-transparent pointer-events-none" />
+             <div className="absolute inset-0 bg-linear-to-tr from-[#7d2e3d]/20 to-transparent pointer-events-none" />
           </div>
         </div>
 
         {/* Project Showcase Gallery */}
         <div>
-          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] mb-8 sm:mb-12 text-center">
+          <h2 className="text-3xl sm:text-4xl md:text-5xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] mb-8 sm:mb-12 text-center">
             Featured Projects
           </h2>
 
@@ -207,7 +214,7 @@ const ProjectsPage = () => {
                       alt={project.name}
                       className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-black/60 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-linear-to-t from-black/60 via-transparent to-transparent" />
                     <div className="absolute bottom-6 left-6 right-6">
                       <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-2">
                         {project.name}
@@ -237,7 +244,7 @@ const ProjectsPage = () => {
                     </div>
 
                     {/* Data Visualization Panel */}
-                    <div className="bg-gradient-to-br from-gray-900 to-black rounded-xl p-6 sm:p-8 shadow-2xl border-2 border-[#7d2e3d]/30">
+                    <div className="bg-linear-to-br from-gray-900 to-black rounded-xl p-6 sm:p-8 shadow-2xl border-2 border-[#7d2e3d]/30">
                       <h4 className="text-[#d4af37] font-bold text-lg sm:text-xl mb-6">
                         Impact Metrics
                       </h4>
@@ -375,6 +382,7 @@ const ProjectsPage = () => {
         </div>
       </div>
     </section>
+    </>
   );
 };
 

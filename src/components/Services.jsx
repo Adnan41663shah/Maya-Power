@@ -215,10 +215,10 @@ const Services = () => {
             alt={service.title}
             className="w-full h-full object-cover group-hover:scale-110 transition-transform duration-700"
           />
-          <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-black/30 to-transparent" />
+          <div className="absolute inset-0 bg-linear-to-t from-black/70 via-black/30 to-transparent" />
           
           {/* Icon Badge */}
-          <div className={`absolute top-4 right-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-gradient-to-br ${service.color} text-white rounded-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
+          <div className={`absolute top-4 right-4 w-14 h-14 sm:w-16 sm:h-16 flex items-center justify-center bg-linear-to-br ${service.color} text-white rounded-xl group-hover:scale-110 group-hover:rotate-6 transition-all duration-500 shadow-lg`}>
             {service.icon}
           </div>
         </div>
@@ -247,7 +247,7 @@ const Services = () => {
   return (
     <section
       id="services"
-      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-gradient-to-b from-white via-gray-50 to-white relative overflow-hidden"
+      className="py-12 sm:py-16 md:py-20 lg:py-24 bg-linear-to-b from-white via-gray-50 to-white relative overflow-hidden"
       aria-label="Services section"
     >
       {/* Background Decoration */}
@@ -259,7 +259,7 @@ const Services = () => {
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
         {/* Page Header */}
         <header className="text-center mb-12 sm:mb-16 md:mb-20">
-          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] mb-4 sm:mb-6">
+          <h1 className="text-4xl sm:text-5xl md:text-6xl lg:text-7xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] via-[#d4af37] to-[#7d2e3d] mb-4 sm:mb-6">
             Our Services
           </h1>
           <p className="text-gray-600 text-base sm:text-lg md:text-xl max-w-3xl mx-auto">
@@ -321,7 +321,7 @@ const Services = () => {
 
         {/* Call to Action */}
         <div className="mt-16 sm:mt-20 md:mt-24 text-center">
-          <div className="bg-gradient-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] rounded-2xl p-8 sm:p-12 md:p-16 shadow-2xl">
+          <div className="bg-linear-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] rounded-2xl p-8 sm:p-12 md:p-16 shadow-2xl">
             <h3 className="text-2xl sm:text-3xl md:text-4xl font-bold text-white mb-4 sm:mb-6">
               Ready to Go Solar?
             </h3>

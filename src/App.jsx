@@ -14,8 +14,10 @@ function AppContent() {
 
   return (
     <>
-      <Navbar />
-      <main>
+      <header role="banner">
+        <Navbar />
+      </header>
+      <main id="main-content" role="main">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<ServicesPage />} />

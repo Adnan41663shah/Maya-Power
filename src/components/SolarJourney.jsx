@@ -2,7 +2,7 @@ import React from 'react';
 
 const SolarJourney = () => {
   return (
-    <section className="py-20 sm:py-24 md:py-32 bg-gradient-to-br from-white via-gray-50 to-white relative overflow-hidden">
+    <section className="py-20 sm:py-24 md:py-32 bg-linear-to-br from-white via-gray-50 to-white relative overflow-hidden">
       {/* Geometric Background Decorations */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
         {/* Large Circle */}
@@ -21,12 +21,12 @@ const SolarJourney = () => {
         <div className="text-center mb-16 sm:mb-20">
           <div className="inline-block mb-4">
             <div className="flex items-center gap-3">
-              <div className="w-12 h-12 bg-gradient-to-br from-[#7d2e3d] to-[#8f3545] rounded-full flex items-center justify-center">
+              <div className="w-12 h-12 bg-linear-to-br from-[#7d2e3d] to-[#8f3545] rounded-full flex items-center justify-center">
                 <svg className="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M12 3v1m0 16v1m9-9h-1M4 12H3m15.364 6.364l-.707-.707M6.343 6.343l-.707-.707m12.728 0l-.707.707M6.343 17.657l-.707.707M16 12a4 4 0 11-8 0 4 4 0 018 0z" />
                 </svg>
               </div>
-              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] via-[#d4af37] to-[#8f3545]">
+              <h2 className="text-4xl sm:text-5xl md:text-6xl font-extrabold text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] via-[#d4af37] to-[#8f3545]">
                 Your Solar Journey
               </h2>
             </div>
@@ -44,7 +44,7 @@ const SolarJourney = () => {
               <div className="absolute -top-8 -left-8 w-24 h-24 bg-[#7d2e3d]/5 rounded-full blur-2xl"></div>
               <div className="relative">
                 <div className="hidden lg:flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#7d2e3d] to-[#8f3545] rounded-2xl flex items-center justify-center shadow-lg transform -rotate-6">
+                  <div className="w-16 h-16 bg-linear-to-br from-[#7d2e3d] to-[#8f3545] rounded-2xl flex items-center justify-center shadow-lg transform -rotate-6">
                     <span className="text-3xl font-bold text-white">1</span>
                   </div>
                   <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">Free Consultation</h3>
@@ -68,9 +68,9 @@ const SolarJourney = () => {
                   className="rounded-3xl shadow-2xl w-full h-64 sm:h-80 md:h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 {/* Mobile-only heading overlay */}
-                <div className="absolute bottom-0 left-0 right-0 lg:hidden bg-gradient-to-t from-black/80 via-black/50 to-transparent rounded-b-3xl p-6">
+                <div className="absolute bottom-0 left-0 right-0 lg:hidden bg-linear-to-t from-black/80 via-black/50 to-transparent rounded-b-3xl p-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#7d2e3d] to-[#8f3545] rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 bg-linear-to-br from-[#7d2e3d] to-[#8f3545] rounded-xl flex items-center justify-center shadow-lg">
                       <span className="text-2xl font-bold text-white">1</span>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Free Consultation</h3>
@@ -91,9 +91,9 @@ const SolarJourney = () => {
                   className="rounded-3xl shadow-2xl w-full h-64 sm:h-80 md:h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 {/* Mobile-only heading overlay */}
-                <div className="absolute bottom-0 left-0 right-0 lg:hidden bg-gradient-to-t from-black/80 via-black/50 to-transparent rounded-b-3xl p-6">
+                <div className="absolute bottom-0 left-0 right-0 lg:hidden bg-linear-to-t from-black/80 via-black/50 to-transparent rounded-b-3xl p-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#4a7c59] to-[#7d2e3d] rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 bg-linear-to-br from-[#4a7c59] to-[#7d2e3d] rounded-xl flex items-center justify-center shadow-lg">
                       <span className="text-2xl font-bold text-white">2</span>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Professional Installation</h3>
@@ -105,7 +105,7 @@ const SolarJourney = () => {
               <div className="absolute -top-8 -right-8 w-24 h-24 bg-[#4a7c59]/5 rounded-full blur-2xl"></div>
               <div className="relative">
                 <div className="hidden lg:flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#4a7c59] to-[#7d2e3d] rounded-2xl flex items-center justify-center shadow-lg transform rotate-6">
+                  <div className="w-16 h-16 bg-linear-to-br from-[#4a7c59] to-[#7d2e3d] rounded-2xl flex items-center justify-center shadow-lg transform rotate-6">
                     <span className="text-3xl font-bold text-white">2</span>
                   </div>
                   <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">Professional Installation</h3>
@@ -128,7 +128,7 @@ const SolarJourney = () => {
               <div className="absolute -bottom-8 -left-8 w-28 h-28 bg-[#d4af37]/5 rounded-full blur-2xl"></div>
               <div className="relative">
                 <div className="hidden lg:flex items-center gap-4 mb-6">
-                  <div className="w-16 h-16 bg-gradient-to-br from-[#d4af37] to-[#8f3545] rounded-2xl flex items-center justify-center shadow-lg transform -rotate-6">
+                  <div className="w-16 h-16 bg-linear-to-br from-[#d4af37] to-[#8f3545] rounded-2xl flex items-center justify-center shadow-lg transform -rotate-6">
                     <span className="text-3xl font-bold text-white">3</span>
                   </div>
                   <h3 className="text-3xl sm:text-4xl font-bold text-gray-900">Ongoing Support</h3>
@@ -152,9 +152,9 @@ const SolarJourney = () => {
                   className="rounded-3xl shadow-2xl w-full h-64 sm:h-80 md:h-96 object-cover transform hover:scale-105 transition-transform duration-500"
                 />
                 {/* Mobile-only heading overlay */}
-                <div className="absolute bottom-0 left-0 right-0 lg:hidden bg-gradient-to-t from-black/80 via-black/50 to-transparent rounded-b-3xl p-6">
+                <div className="absolute bottom-0 left-0 right-0 lg:hidden bg-linear-to-t from-black/80 via-black/50 to-transparent rounded-b-3xl p-6">
                   <div className="flex items-center gap-3">
-                    <div className="w-12 h-12 bg-gradient-to-br from-[#d4af37] to-[#8f3545] rounded-xl flex items-center justify-center shadow-lg">
+                    <div className="w-12 h-12 bg-linear-to-br from-[#d4af37] to-[#8f3545] rounded-xl flex items-center justify-center shadow-lg">
                       <span className="text-2xl font-bold text-white">3</span>
                     </div>
                     <h3 className="text-2xl font-bold text-white">Ongoing Support</h3>
@@ -167,9 +167,9 @@ const SolarJourney = () => {
 
         {/* Bottom CTA Circle */}
         <div className="mt-20 text-center relative">
-          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-gradient-to-br from-[#7d2e3d]/5 to-[#d4af37]/5 rounded-full blur-3xl"></div>
+          <div className="absolute top-1/2 left-1/2 transform -translate-x-1/2 -translate-y-1/2 w-64 h-64 bg-linear-to-br from-[#7d2e3d]/5 to-[#d4af37]/5 rounded-full blur-3xl"></div>
           <div className="relative inline-block">
-            <div className="w-48 h-48 sm:w-56 sm:h-56 bg-gradient-to-br from-[#7d2e3d] via-[#8f3545] to-[#d4af37] rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition-all duration-300 mx-auto">
+            <div className="w-48 h-48 sm:w-56 sm:h-56 bg-linear-to-br from-[#7d2e3d] via-[#8f3545] to-[#d4af37] rounded-full flex items-center justify-center shadow-2xl transform hover:scale-110 transition-all duration-300 mx-auto">
               <div className="text-center text-white">
                 <div className="text-5xl sm:text-6xl font-bold mb-2">3</div>
                 <div className="text-lg sm:text-xl font-semibold">Simple Steps</div>

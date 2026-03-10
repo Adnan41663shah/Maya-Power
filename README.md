@@ -7,8 +7,10 @@ Live project Link: https://maya-power.vercel.app/
 ### Core Functionality
 - **Multi-page Navigation**: Home, Services, Projects, and About pages
 - **WhatsApp Integration**: Contact forms automatically open WhatsApp with pre-filled messages
-- **Projection Modal**: Popup modal for "Get a Projection" requests accessible from navbar and hero section
+- **Projection Modal**: Popup modal for "Get a Projection" requests (opened via **ModalContext** from navbar, hero, and services)
+- **Toast Notifications**: Global success/error toasts (via **ToastContext**) after form submissions in footer and projection modal
 - **Contact Forms**: Multiple contact forms (footer and modal) with validation
+- **SEO**: Per-page meta tags, canonical URLs, Open Graph & Twitter cards, sitemap, robots.txt, and JSON-LD structured data
 - **Responsive Design**: Mobile-first approach, fully responsive across all devices
 
 ### UI/UX Features
@@ -34,6 +36,8 @@ Live project Link: https://maya-power.vercel.app/
 - **Vite 7.2.4** - Build tool and dev server
 - **React Router DOM 7.10.1** - Client-side routing
 - **Tailwind CSS 4.1.18** - Utility-first CSS framework
+- **react-helmet-async** - SEO meta tags per page
+- **@emailjs/browser** - Email/contact form integration (if used)
 - **ESLint** - Code linting
 
 ## 📁 Project Structure
@@ -41,25 +45,29 @@ Live project Link: https://maya-power.vercel.app/
 ```
 frontend/
 ├── src/
-│   ├── components/          # Reusable UI components
-│   │   ├── Footer.jsx       # Footer with contact form
-│   │   ├── Hero.jsx         # Hero section with CTA
-│   │   ├── Navbar.jsx       # Navigation bar
-│   │   ├── ProjectionModal.jsx  # Modal for projection requests
-│   │   ├── Services.jsx     # Services showcase
-│   │   ├── Stats.jsx        # Statistics display
-│   │   ├── Teaser.jsx       # Customer testimonials/reviews
-│   │   └── WhyChooseUs.jsx  # Benefits section
-│   ├── context/             # React Context providers
-│   │   └── ModalContext.jsx # Modal state management
-│   ├── pages/               # Page components
-│   │   ├── Home.jsx         # Home page
-│   │   ├── AboutPage.jsx    # About page
-│   │   ├── ProjectsPage.jsx # Projects page
-│   │   └── ServicesPage.jsx # Services page
-│   ├── App.jsx              # Main app component with routing
-│   ├── main.jsx             # Entry point
-│   └── index.css            # Global styles
+│   ├── components/             # Reusable UI components
+│   │   ├── Footer.jsx          # Footer with contact form + toasts
+│   │   ├── Hero.jsx            # Hero section with CTA (opens projection modal)
+│   │   ├── Navbar.jsx          # Navigation bar (opens projection modal)
+│   │   ├── ProjectionModal.jsx # Modal for projection requests + toasts
+│   │   ├── ProductTieUps.jsx   # Product/partner tie-ups section
+│   │   ├── Services.jsx        # Services showcase (opens projection modal)
+│   │   ├── SolarJourney.jsx    # Solar journey / process section
+│   │   ├── SEO.jsx             # Per-page SEO: title, description, canonical, Open Graph, Twitter cards
+│   │   ├── Stats.jsx           # Statistics display
+│   │   ├── Teaser.jsx          # Customer testimonials/reviews
+│   │   └── WhyChooseUs.jsx     # Benefits section
+│   ├── context/                # React Context providers
+│   │   ├── ModalContext.jsx   # Global projection modal (open/close) — used by App, Hero, Navbar, Services
+│   │   └── ToastContext.jsx   # Global toast notifications (success/error) — used by App, Footer, ProjectionModal
+│   ├── pages/                  # Page components
+│   │   ├── Home.jsx            # Home page
+│   │   ├── AboutPage.jsx       # About page (story, values, team, timeline)
+│   │   ├── ProjectsPage.jsx    # Projects page
+│   │   └── ServicesPage.jsx    # Services page
+│   ├── App.jsx                 # Main app with routing, ModalProvider, ToastProvider
+│   ├── main.jsx                # Entry point
+│   └── index.css               # Global styles
 ├── package.json
 └── README.md
 ```
@@ -75,7 +83,7 @@ frontend/
 1. **Clone the repository**
    ```bash
    git clone <repository-url>
-   cd Solar-Panel/frontend
+   cd Maya-Power/frontend
    ```
 
 2. **Install dependencies**
@@ -106,6 +114,10 @@ npm run preview
 ```
 
 ## 🎨 Key Components
+
+### Context providers (App.jsx)
+- **ModalProvider** – Exposes `openModal` / `closeModal` / `isModalOpen`. Used so Hero, Navbar, and Services can open the same projection modal without prop drilling. App renders `<ProjectionModal isOpen={isModalOpen} onClose={closeModal} />`.
+- **ToastProvider** – Exposes `addToast({ message, type: 'success'|'error', duration })`. Renders a fixed toast container (bottom-right). Used by Footer and ProjectionModal to show success/error after form actions.
 
 ### Hero Section
 - Animated solar panel graphics
@@ -165,6 +177,58 @@ To change the WhatsApp number, update the `whatsappNumber` variable in both file
 - Email format is validated by browser
 - Real-time input filtering prevents invalid characters
 
+## 🔍 SEO
+
+The project is set up for search engines and social sharing.
+
+### Per-page SEO (`SEO.jsx`)
+
+Every page uses the **SEO** component (powered by `react-helmet-async`) to set:
+
+- **Title** – `{title} | Maya Power` (default: "Maya Power - Solar Energy Solutions in Maharashtra")
+- **Meta description** – Unique per page for snippets and social previews
+- **Canonical URL** – Avoids duplicate content (e.g. `https://mayapower.com/about`)
+- **Open Graph** – `og:title`, `og:description`, `og:image`, `og:url`, `og:site_name`, `og:locale` for Facebook/LinkedIn
+- **Twitter cards** – `summary_large_image` with title, description, image, URL
+- **Optional** – `noindex` for pages that should not be indexed
+
+**Usage on a page:**
+
+```jsx
+import SEO from '../components/SEO';
+
+<SEO
+  title="Page Title Here"
+  description="Unique description for this page (155–160 chars recommended)."
+  path="/page-path"
+  image="/optional-og-image.jpg"  // defaults to /og-image.jpg
+  noindex={false}                 // set true to hide from search engines
+/>
+```
+
+**Where it’s used:** `Home.jsx`, `AboutPage.jsx`, `ServicesPage.jsx`, `ProjectsPage.jsx`.
+
+**Base URL:** Configured in `src/components/SEO.jsx` as `SITE_URL = 'https://mayapower.com'`. Update this if the production domain changes.
+
+### Default meta & structured data (`index.html`)
+
+The root HTML includes:
+
+- Primary meta: title, description, keywords, author, robots, language, revisit-after
+- Open Graph and Twitter meta for the homepage
+- **Theme color** – `#7d2e3d`
+- **JSON-LD** – Organization and WebSite schemas for rich results (name, url, logo, description, address, publisher)
+
+### Sitemap & robots
+
+- **`public/sitemap.xml`** – Lists `/`, `/about`, `/services`, `/projects` with `changefreq` and `priority`. Update when adding or removing main routes.
+- **`public/robots.txt`** – Allows all crawlers and points to `Sitemap: https://mayapower.com/sitemap.xml`. Update the Sitemap URL if the domain changes.
+
+### Social share image
+
+- Default OG/Twitter image: **`/og-image.jpg`** (place in `public/`). The SEO component uses `SITE_URL` to build the full image URL.
+- Per-page images can be passed via the `image` prop on `<SEO />`.
+
 ## 🎯 Features in Detail
 
 ### Navigation
@@ -208,9 +272,10 @@ This project is private and proprietary.
 
 Built with modern React practices:
 - Functional components with hooks
-- Context API for state management
+- Context API for global state: **ModalContext** (projection modal), **ToastContext** (notifications)
 - Component-based architecture
 - Responsive design patterns
+- Per-page SEO via `react-helmet-async` (SEO.jsx)
 
 ---
 

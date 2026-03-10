@@ -81,7 +81,7 @@ Please provide me with a projection. Thank you!`;
     const encodedMessage = encodeURIComponent(whatsappMessage);
     
     // WhatsApp number (9270420922)
-    const whatsappNumber = '9270420922';
+    const whatsappNumber = '9823688050';
     
     // Create WhatsApp URL
     const whatsappUrl = `https://wa.me/${whatsappNumber}?text=${encodedMessage}`;
@@ -126,7 +126,7 @@ Please provide me with a projection. Thank you!`;
       >
         {/* Modal Header */}
         <div className="flex items-center justify-between p-6 border-b border-gray-200">
-          <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-[#7d2e3d] to-[#8f3545]">
+          <h2 className="text-2xl font-bold text-transparent bg-clip-text bg-linear-to-r from-[#7d2e3d] to-[#8f3545]">
             Get a Projection
           </h2>
           <button
@@ -223,7 +223,7 @@ Please provide me with a projection. Thank you!`;
           {/* Submit Button */}
           <button
             type="submit"
-            className="w-full px-6 py-3 bg-gradient-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#7d2e3d]/50 transition-all duration-300 hover:scale-105 text-base cursor-pointer mt-6"
+            className="w-full px-6 py-3 bg-linear-to-r from-[#7d2e3d] via-[#8f3545] to-[#d4af37] text-white font-semibold rounded-lg hover:shadow-lg hover:shadow-[#7d2e3d]/50 transition-all duration-300 hover:scale-105 text-base cursor-pointer mt-6"
           >
             Submit & Send via WhatsApp
           </button>

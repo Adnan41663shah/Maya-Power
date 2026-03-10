@@ -2,7 +2,7 @@ import React from 'react';
 
 const FloatingStats = () => {
   return (
-    <section className="py-16 sm:py-20 bg-gradient-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
+    <section className="py-16 sm:py-20 bg-linear-to-b from-white via-gray-50/50 to-white relative overflow-hidden">
       {/* Background decoration */}
       <div className="absolute inset-0 pointer-events-none">
         <div className="absolute top-0 left-1/4 w-64 h-64 bg-[#7d2e3d]/5 rounded-full blur-3xl"></div>
@@ -21,7 +21,7 @@ const FloatingStats = () => {
             }}
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#7d2e3d] to-[#8f3545] rounded-xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-linear-to-br from-[#7d2e3d] to-[#8f3545] rounded-xl flex items-center justify-center mb-4 shadow-lg">
                 <svg className="w-8 h-8 sm:w-9 sm:h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -40,7 +40,7 @@ const FloatingStats = () => {
             }}
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#4a7c59] to-[#7d2e3d] rounded-xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-linear-to-br from-[#4a7c59] to-[#7d2e3d] rounded-xl flex items-center justify-center mb-4 shadow-lg">
                 <svg className="w-8 h-8 sm:w-9 sm:h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 10V3L4 14h7v7l9-11h-7z" />
                 </svg>
@@ -59,7 +59,7 @@ const FloatingStats = () => {
             }}
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#d4af37] to-[#8f3545] rounded-xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-linear-to-br from-[#d4af37] to-[#8f3545] rounded-xl flex items-center justify-center mb-4 shadow-lg">
                 <svg className="w-8 h-8 sm:w-9 sm:h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M3.055 11H5a2 2 0 012 2v1a2 2 0 002 2 2 2 0 012 2v2.945M8 3.935V5.5A2.5 2.5 0 0010.5 8h.5a2 2 0 012 2 2 2 0 104 0 2 2 0 012-2h1.064M15 20.488V18a2 2 0 012-2h3.064M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>
@@ -78,7 +78,7 @@ const FloatingStats = () => {
             }}
           >
             <div className="flex flex-col items-center text-center">
-              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-gradient-to-br from-[#8f3545] to-[#d4af37] rounded-xl flex items-center justify-center mb-4 shadow-lg">
+              <div className="w-14 h-14 sm:w-16 sm:h-16 bg-linear-to-br from-[#8f3545] to-[#d4af37] rounded-xl flex items-center justify-center mb-4 shadow-lg">
                 <svg className="w-8 h-8 sm:w-9 sm:h-9 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24">
                   <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M14.828 14.828a4 4 0 01-5.656 0M9 10h.01M15 10h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
                 </svg>

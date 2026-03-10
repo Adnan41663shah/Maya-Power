@@ -2,6 +2,7 @@ import React, { createContext, useContext, useState, useCallback } from 'react';
 
 const ToastContext = createContext();
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const useToast = () => {
   const context = useContext(ToastContext);
   if (!context) {
@@ -10,6 +11,7 @@ export const useToast = () => {
   return context;
 };
 
+// eslint-disable-next-line react-refresh/only-export-components
 export const ToastProvider = ({ children }) => {
   const [toasts, setToasts] = useState([]);
 
@@ -18,6 +20,7 @@ export const ToastProvider = ({ children }) => {
     setToasts((prev) => [...prev, { id, message, type }]);
 
     setTimeout(() => {
+      // eslint-disable-next-line react-hooks/exhaustive-deps
       removeToast(id);
     }, duration);
   }, []);
@@ -45,7 +48,7 @@ export const ToastProvider = ({ children }) => {
           >
             {/* Icon */}
             <div
-              className={`flex-shrink-0 w-8 h-8 rounded-full flex items-center justify-center 
+              className={`shrink-0 w-8 h-8 rounded-full flex items-center justify-center 
               ${toast.type === 'success' ? 'bg-green-100 text-green-600' : 'bg-red-100 text-red-600'}`}
             >
               {toast.type === 'success' ? (

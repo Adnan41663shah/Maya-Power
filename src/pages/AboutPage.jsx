@@ -1,4 +1,5 @@
 import React, { useEffect, useRef, useState } from 'react';
+import SEO from '../components/SEO';
 // import InspirationSection from '../components/InspirationSection';
 
 const AboutPage = () => {
@@ -59,7 +60,7 @@ const AboutPage = () => {
   const team = [
     {
       name: 'Saurabh Dalal',
-      role: 'Partner - Sales',
+      role: 'Partner - Sales & Project Exexution',
       education: [
         'Bachelor Of Business Administration - In HR And Finance',
         'Masters Of Business Administration - In Sales, Marketing And Operations'
@@ -78,11 +79,10 @@ const AboutPage = () => {
       name: 'Satish Dalal',
       role: 'Partner - Installations And Execution',
       education: [
-        'HSC',
-        'ITI - Electrical',
-        'ITI - Welder'
+        'B.Com',
+        'M.Com',
       ],
-      experience: '7+ years',
+      experience: '25+ years in MSEDCL',
       responsibilities: [
         'Vendor Management, Contract Negotiations',
         'Project Executions and Logistics',
@@ -90,6 +90,13 @@ const AboutPage = () => {
         'Responsible for Project Cost Control',
         'Lead Generations'
       ],
+    },
+    {
+      name: 'Maya Padwad',
+      role: 'Mother of Mr Saurabh Dalal',
+      fullBio: `Maya Padwad represents the true spirit of innovation, dedication, and resilience. She strongly believes that challenges are simply opportunities to find better solutions. With this mindset, she approaches every problem thoughtfully and focuses on delivering the best possible outcomes. Her commitment to maintaining high quality in every aspect of work has helped build a strong and reliable operational foundation for Maya Power.
+
+She firmly believes that technology should always work for people and make their lives easier. Because of this belief, she has shaped Maya Power’s approach to be deeply customer-focused, especially in the field of solar installations. Every project is designed with the customer’s needs, comfort, and long-term benefits in mind.`,
     },
   ];
 
@@ -141,6 +148,11 @@ const AboutPage = () => {
 
   return (
     <div className="bg-white min-h-screen">
+      <SEO
+        title="About Us - Our Story, Mission & Leadership"
+        description="Maya Power is a Central India–based solar solutions provider. Learn about our story, mission, vision, core values, and leadership team. Over 5 MW EPC projects and 300+ solar installations."
+        path="/about"
+      />
       {/* Hero Section */}
       <div className="relative h-screen min-h-[500px] flex items-center justify-center overflow-hidden">
         {/* Background Image */}
@@ -367,7 +379,7 @@ const AboutPage = () => {
           <p className="text-gray-600 text-base sm:text-lg text-center max-w-2xl mx-auto mb-8 sm:mb-10 md:mb-12 px-4">
             Meet the leaders driving our vision for sustainable solar solutions.
           </p>
-          <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 sm:gap-6 lg:gap-8 max-w-4xl mx-auto px-4 sm:px-0">
+          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-4 sm:gap-6 lg:gap-8 max-w-6xl mx-auto px-4 sm:px-0">
             {team.map((member, index) => (
               <div
                 key={index}
@@ -380,36 +392,52 @@ const AboutPage = () => {
                 </div>
 
                 <div className="p-5 sm:p-6 flex flex-col grow">
-                  <div className="mb-4">
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">Education</h4>
-                    <ul className="space-y-1">
-                      {member.education.map((edu, idx) => (
-                        <li key={idx} className="text-gray-600 flex items-start gap-2 text-sm leading-snug">
-                          <span className="text-[#7d2e3d] shrink-0 mt-0.5">•</span>
-                          <span className="wrap-break-word">{edu}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                  {member.fullBio ? (
+                    <div className="text-gray-600 text-sm leading-relaxed space-y-3">
+                      {member.fullBio.split('\n').map((paragraph, idx) => {
+                        const trimmed = paragraph.trim();
+                        if (!trimmed) return null;
+                        return (
+                          <p key={idx} className="leading-relaxed">
+                            {trimmed}
+                          </p>
+                        );
+                      })}
+                    </div>
+                  ) : (
+                    <>
+                      <div className="mb-4">
+                        <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">Education</h4>
+                        <ul className="space-y-1">
+                          {member.education.map((edu, idx) => (
+                            <li key={idx} className="text-gray-600 flex items-start gap-2 text-sm leading-snug">
+                              <span className="text-[#7d2e3d] shrink-0 mt-0.5">•</span>
+                              <span className="wrap-break-word">{edu}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
 
-                  <div className="mb-4">
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-1">Experience</h4>
-                    <p className="text-gray-800 font-semibold text-sm">{member.experience}</p>
-                  </div>
+                      <div className="mb-4">
+                        <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-1">Experience</h4>
+                        <p className="text-gray-800 font-semibold text-sm">{member.experience}</p>
+                      </div>
 
-                  <div>
-                    <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">Key Responsibilities</h4>
-                    <ul className="space-y-1.5">
-                      {member.responsibilities.map((resp, idx) => (
-                        <li key={idx} className="text-gray-600 flex items-start gap-2 text-sm leading-snug">
-                          <svg className="w-4 h-4 text-[#7d2e3d] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
-                          </svg>
-                          <span className="wrap-break-word">{resp}</span>
-                        </li>
-                      ))}
-                    </ul>
-                  </div>
+                      <div>
+                        <h4 className="text-xs font-bold text-gray-900 uppercase tracking-wider mb-2">Key Responsibilities</h4>
+                        <ul className="space-y-1.5">
+                          {member.responsibilities.map((resp, idx) => (
+                            <li key={idx} className="text-gray-600 flex items-start gap-2 text-sm leading-snug">
+                              <svg className="w-4 h-4 text-[#7d2e3d] shrink-0 mt-0.5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                              </svg>
+                              <span className="wrap-break-word">{resp}</span>
+                            </li>
+                          ))}
+                        </ul>
+                      </div>
+                    </>
+                  )}
                 </div>
               </div>
             ))}
