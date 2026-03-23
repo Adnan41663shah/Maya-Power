@@ -60,7 +60,7 @@ const AboutPage = () => {
   const team = [
     {
       name: 'Saurabh Dalal',
-      role: 'Partner - Sales & Project Exexution',
+      role: 'Partner - Sales & Project Execution',
       education: [
         'Bachelor Of Business Administration - In HR And Finance',
         'Masters Of Business Administration - In Sales, Marketing And Operations'
@@ -94,9 +94,8 @@ const AboutPage = () => {
     {
       name: 'Maya Padwad',
       role: 'Mother of Mr Saurabh Dalal',
-      fullBio: `Maya Padwad represents the true spirit of innovation, dedication, and resilience. She strongly believes that challenges are simply opportunities to find better solutions. With this mindset, she approaches every problem thoughtfully and focuses on delivering the best possible outcomes. Her commitment to maintaining high quality in every aspect of work has helped build a strong and reliable operational foundation for Maya Power.
-
-She firmly believes that technology should always work for people and make their lives easier. Because of this belief, she has shaped Maya Power’s approach to be deeply customer-focused, especially in the field of solar installations. Every project is designed with the customer’s needs, comfort, and long-term benefits in mind.`,
+      image: '/maya-padwad.png',
+      fullBio: `Maya Padwad represents the true spirit of innovation, dedication, and resilience. She strongly believes that challenges are simply opportunities to find better solutions. With this mindset, she approaches every problem thoughtfully and focuses on delivering the best possible outcomes. Her commitment to maintaining high quality in every aspect of work has helped build a strong and reliable operational foundation for Maya Power.`,
     },
   ];
 
@@ -386,24 +385,36 @@ She firmly believes that technology should always work for people and make their
                 className="bg-white rounded-2xl shadow-md border border-gray-100 hover:shadow-lg hover:border-[#7d2e3d]/20 transition-all duration-300 overflow-hidden flex flex-col"
               >
                 {/* Header - name & role */}
-                <div className="px-5 py-4 sm:px-6 sm:py-5 bg-linear-to-br from-[#7d2e3d] to-[#8f3545]">
+                <div className="px-5 py-4 sm:px-3 sm:py-5 bg-linear-to-br from-[#7d2e3d] to-[#8f3545]">
                   <h3 className="text-lg sm:text-xl font-bold text-white mb-1">{member.name}</h3>
                   <p className="text-[#d4af37] font-medium text-xs sm:text-sm uppercase tracking-wider">{member.role}</p>
                 </div>
 
-                <div className="p-5 sm:p-6 flex flex-col grow">
+                <div className="p-3 flex flex-col grow">
                   {member.fullBio ? (
-                    <div className="text-gray-600 text-sm leading-relaxed space-y-3">
-                      {member.fullBio.split('\n').map((paragraph, idx) => {
-                        const trimmed = paragraph.trim();
-                        if (!trimmed) return null;
-                        return (
-                          <p key={idx} className="leading-relaxed">
-                            {trimmed}
-                          </p>
-                        );
-                      })}
-                    </div>
+                    <>
+                      {member.image && (
+                        <div className="mb-1">
+                          <img
+                            src={member.image}
+                            alt={member.name}
+                            className="w-full h-auto aspect-4/2 object-cover rounded-xl border border-[#7d2e3d]/15 shadow-sm mx-auto"
+                            loading="lazy"
+                          />
+                        </div>
+                      )}
+                      <div className="text-gray-600 text-sm leading-relaxed space-y-3">
+                        {member.fullBio.split('\n').map((paragraph, idx) => {
+                          const trimmed = paragraph.trim();
+                          if (!trimmed) return null;
+                          return (
+                            <p key={idx} className="leading-relaxed">
+                              {trimmed}
+                            </p>
+                          );
+                        })}
+                      </div>
+                    </>
                   ) : (
                     <>
                       <div className="mb-4">
